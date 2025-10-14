@@ -1,0 +1,98 @@
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: #111; 
+  }
+  
+  body {
+    background-color: var(--main-bg-color);
+    color: #eee;
+  }
+} */
+
+.fire-effect {
+  animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { box-shadow: 0 0 10px #ff4500, 0 0 20px #ff6347; }
+  50% { box-shadow: 0 0 20px #ff4500, 0 0 40px #ff6347; }
+  100% { box-shadow: 0 0 15px #ff4500, 0 0 30px #ff6347; }
+}
+
+.ice-effect {
+  background-color: #111; /* Dark background makes ice pop */
+  color: #cceeff;
+  box-shadow: 0 0 5px #00f, 0 0 10px #0ff, 0 0 15px #aaf; /* reduced blur */
+  animation: ice-glow 3s infinite alternate;
+}
+
+@keyframes ice-glow {
+  0% { box-shadow: 0 0 5px #00f, 0 0 10px #0ff, 0 0 15px #aaf; }
+  50% { box-shadow: 0 0 7px #00f, 0 0 14px #0ff, 0 0 21px #aaf; }
+  100% { box-shadow: 0 0 6px #00f, 0 0 12px #0ff, 0 0 18px #aaf; }
+}
+
+
+.smoke-effect {
+  background-color: #1a1a1a; /* Dark background */
+  color: #eee;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.05),
+    0 0 20px rgba(255, 255, 255, 0.05),
+    0 0 30px rgba(255, 255, 255, 0.05),
+    0 0 40px rgba(255, 255, 255, 0.03),
+    0 0 60px rgba(255, 255, 255, 0.02);
+  animation: smoke-move 3s infinite alternate;
+}
+
+@keyframes smoke-move {
+  0% {
+    box-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.05),
+      0 0 20px rgba(255, 255, 255, 0.05),
+      0 0 30px rgba(255, 255, 255, 0.05),
+      0 0 40px rgba(255, 255, 255, 0.03),
+      0 0 60px rgba(255, 255, 255, 0.02);
+  }
+  50% {
+    box-shadow: 
+      0 0 15px rgba(255, 255, 255, 0.07),
+      0 0 25px rgba(255, 255, 255, 0.06),
+      0 0 35px rgba(255, 255, 255, 0.05),
+      0 0 45px rgba(255, 255, 255, 0.04),
+      0 0 65px rgba(255, 255, 255, 0.03);
+  }
+  100% {
+    box-shadow: 
+      0 0 12px rgba(255, 255, 255, 0.06),
+      0 0 22px rgba(255, 255, 255, 0.05),
+      0 0 32px rgba(255, 255, 255, 0.04),
+      0 0 42px rgba(255, 255, 255, 0.03),
+      0 0 62px rgba(255, 255, 255, 0.02);
+  }
+}
+.navdark-mode,.addnote-dark-mode , .noteitem-dark-mode,.signup-dark-mode ,.login-dark-mode {
+  background-color: rgba(34, 34, 34, 0.8); /* semi-transparent dark */
+  color: #f8f9fa; /* Light text */
+}
+
+.navlight-mode ,.addnote-light-mode , .noteitem-light-mode ,.signup-light-mode,.login-light-mode {
+  background-color: #f8f9fa; /* Light background */
+  color: #212529; /* Dark text */
+}
+.scrollable-desc {
+  max-height: 50px;
+  min-height: 50px;
+  overflow-y: auto;
+  
+  /* Hide scrollbar for Chrome, Safari and Edge */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.scrollable-desc::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
