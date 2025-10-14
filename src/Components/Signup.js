@@ -9,7 +9,7 @@ const Signup = (props) => {
     const { mode } = Contextdarkmode;
     const { showAlert } = props;
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "" });
-    const host = 'inotebook-backend-eta.vercel.app';
+    const host = 'https://inotebook-backend-eta.vercel.app';
     const handleSubmit = async (e) => {
         e.preventDefault();
         // API CALLS
