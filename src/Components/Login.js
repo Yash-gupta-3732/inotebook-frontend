@@ -9,7 +9,7 @@ const Login = (props) => {
     const Contextdarkmode = useContext(darkmodeContext);
     const { mode } = Contextdarkmode;
     const [credentials, setCredentials] = useState({ email: "", password: "" });
-    const host = 'inotebook-backend-eta.vercel.app';
+    const host = 'https://inotebook-backend-eta.vercel.app';
     // clear inputs when login page loads
     useEffect(() => {
         setCredentials({ email: "", password: "" });
