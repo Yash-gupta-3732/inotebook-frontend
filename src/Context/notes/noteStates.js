@@ -4,7 +4,7 @@ import NoteContext from "./noteContext";
 const NoteState = (props) => {
     const initialnotes = []
     const [notes, setNotes] = useState(initialnotes)
-    const host = 'inotebook-backend-eta.vercel.app';
+    const host = 'https://inotebook-backend-eta.vercel.app';
 
     //GET all notes
     const getNote = async () => {
