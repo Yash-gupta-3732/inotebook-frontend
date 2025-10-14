@@ -46,7 +46,7 @@ function App() {
                   <Route exact path='/Signup' element={<Signup showAlert={showAlert} />} />
                 </Routes>
               </div>
-            </Router>
+            </HashRouter>
           </SearchState>
         </DarkmodeState>
       </NoteState>
