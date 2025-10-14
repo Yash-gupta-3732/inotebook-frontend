@@ -1,6 +1,6 @@
 import './App.css';
 import {
-  BrowserRouter as Router
+  HashRouter
   , Routes
   , Route
 }
@@ -35,7 +35,7 @@ function App() {
       <NoteState>
         <DarkmodeState>
           <SearchState>
-            <Router>
+            <HashRouter>
               <Navbar />
               {alert && <Alert message={alert.msg} type={alert.type} />}
               <div className="container">
