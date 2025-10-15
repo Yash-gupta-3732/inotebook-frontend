@@ -28,7 +28,6 @@ const Login = (props) => {
         });
 
         const json = await response.json();
-        console.log('LOGIN', json) // get auth-token in response
         if (json.success) {
             //save the auth-token and redirect
             localStorage.setItem('token', json.authtoken);
