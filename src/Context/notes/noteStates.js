@@ -6,6 +6,7 @@ const NoteState = (props) => {
     const [notes, setNotes] = useState(initialnotes)
     const host = 'https://inotebook-backend-eta.vercel.app';
 
+
     //GET all notes
     const getNote = async () => {
         // API CALLS
@@ -84,8 +85,8 @@ const NoteState = (props) => {
         ));
 
     }
-    const handleShare = async (noteId) => {
-        const email = prompt("Enter the email of the user to share with:");
+    const shareNote = async (noteId,email) => {
+console.log("Sharing note", noteId, email);
         if (!email) return;
 
         const response = await fetch(`${host}/api/notes/share/${noteId}`, {
@@ -108,7 +109,7 @@ const NoteState = (props) => {
     };
 
     return (
-        <NoteContext.Provider value={{ notes, setNotes, addNote, deleteNote, editNote, getNote, handleShare }}>
+        <NoteContext.Provider value={{ notes, setNotes, addNote, deleteNote, editNote, getNote, shareNote}}>
             {props.children}
         </NoteContext.Provider>
     )
