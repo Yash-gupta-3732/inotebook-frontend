@@ -11,7 +11,6 @@ const Notes = () => {
   const searchCtx = useContext(searchContext);
   const Context = useContext(noteContext);
   const { searchText } = searchCtx;
-  console.log(searchText);
   const { notes, getNote, editNote } = Context;
   const [note, setNote] = useState({ id: "", etitle: "", edesc: "", etag: "" })
   const ref = useRef(null)
