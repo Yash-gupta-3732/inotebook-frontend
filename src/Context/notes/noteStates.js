@@ -86,7 +86,6 @@ const NoteState = (props) => {
     }
     const handleShare = async (noteId) => {
         const email = prompt("Enter the email of the user to share with:");
-        console.log(email);
         if (!email) return;
 
         const response = await fetch(`${host}/api/notes/share/${noteId}`, {
