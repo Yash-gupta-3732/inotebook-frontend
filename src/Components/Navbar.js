@@ -35,8 +35,8 @@ const Navbar = () => {
                 <Link className={`nav-link ${location.pathname === '/About' ? 'active' : ""}`} aria-current="page" to="/About">About</Link>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+            <form className="d-flex" role="search">
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
             </form>
 
             <div className={`form-check form-switch text-${mode === 'light' ? 'dark' : 'light'} mx-3`}>
