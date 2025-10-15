@@ -4,11 +4,11 @@ import darkmodeContext from '../Context/darkmode/darkmodeContext';
 import '../App.css'
 
 const Noteitem = (props) => {
-    const { note, updateNote } = props;
+    const { note, updateNote,handleShare } = props;
     const Context = useContext(noteContext);
     const Contextdarkmode = useContext(darkmodeContext);
     const { mode } = Contextdarkmode;
-    const { deleteNote, handleShare } = Context;
+    const { deleteNote } = Context;
     return (
         <div className='col-md-3'>
             <div className={`card my-3 ice-effect ${mode === 'light' ? 'noteitem-light-mode' : 'noteitem-dark-mode'}`} >
