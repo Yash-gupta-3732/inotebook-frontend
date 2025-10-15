@@ -13,14 +13,12 @@ const Navbar = () => {
   const { mode, toggleMode } = Context;
   const handleLogout = () => {
     localStorage.removeItem("token");
-    console.log("logout");
     navigate("/login");
   }
 
   return (
     <>
       <nav className={`navbar navbar-expand-lg navbar-${mode} ${mode === 'light' ? 'navlight-mode' : 'navdark-mode'} fixed-top`}>
-        {console.log(mode)}
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">iNotebook</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
