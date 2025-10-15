@@ -10,7 +10,6 @@ const Modal = (props) => {
   } = props;
 
   const modalType = saveText === "Add Note" ? "Add your notes" : "Edit your notes";
-  console.log(saveText)
 
   const titleName = saveText === "Add Note" ? "title" : "etitle";
   const descName = saveText === "Add Note" ? "description" : "edescription";
