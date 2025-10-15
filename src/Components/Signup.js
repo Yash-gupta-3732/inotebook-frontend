@@ -23,7 +23,6 @@ const Signup = (props) => {
         });
 
         const json = await response.json();
-        console.log('usercraeted', json) // get auth-token in response
 
         if (json.success) {
             //save the auth-token and redirect
